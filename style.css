@@ -12,13 +12,27 @@
     color: rgb(58, 57, 57);
     font-size: 1rem;
     display: grid;
-    grid-template-columns: 15rem auto;
+    grid-template-columns: 22rem auto;
 
 }
 
 .wrapper .sidebar{
+    width: 100%;
+    background-color: rgb(59, 107, 28);
+
 
 }
+
+.wrapper .sidebar h3{
+    color: white;
+}
+
+.wrapper main {
+    width: 100%;
+    background-color: rgb(123, 47, 164);
+     color: white;
+}
+
 
 footer{
     position: absolute;
