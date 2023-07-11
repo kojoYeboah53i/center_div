@@ -25,12 +25,44 @@
 
 .wrapper .sidebar h3{
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
 }
 
 .wrapper main {
     width: 100%;
-    background-color: rgb(123, 47, 164);
-     color: white;
+     color: rgb(36, 32, 32);
+     /* text-align: center; */
+     /* margin: 0 auto; */
+     padding: 1rem 2rem;
+
+}
+
+.wrapper main .flexbox {
+
+    display:flex;
+    border: 2px solid red;
+    padding: 0.8rem 1rem;
+
+    justify-content: center ;
+    align-items: center;
+
+
+    height: 60vh;
+    width: 70%;
+
+
+    
+
+}
+
+.wrapper main .flexbox span{
+/* background-color: rgb(102, 163, 102)     */
+
 }
 
 
