@@ -39,21 +39,24 @@
      /* text-align: center; */
      /* margin: 0 auto; */
      padding: 1rem 2rem;
+     display: flex;
+    
 
 }
 
-.wrapper main .flexbox {
 
+.wrapper main .flexbox {
+    margin-top: 5rem;
     display:flex;
     border: 2px solid red;
     padding: 0.8rem 1rem;
-
+    gap: 1rem;
     justify-content: center ;
     align-items: center;
 
 
     height: 60vh;
-    width: 70%;
+    width: 100%;
 
 
     
@@ -62,6 +65,9 @@
 
 .wrapper main .flexbox span{
 /* background-color: rgb(102, 163, 102)     */
+font-size: 2rem;
+font-weight: bold;
+color: rgb(211, 205, 205);
 
 }
 
