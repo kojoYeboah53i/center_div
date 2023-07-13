@@ -24,6 +24,8 @@ section{
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
+    display: flex;
+    /* justify-content: flex-end; */
 }
 .position{
     display: block;
