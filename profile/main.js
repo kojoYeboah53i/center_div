@@ -8,9 +8,15 @@ console.log("main javascript file is working")
 const uploadButton = document.querySelector('div.img-profile div.iconDiv');
 
 uploadButton.addEventListener('click', function() {
-    document.querySelector('input[type=file]').click();
-});
+   document.querySelector('input[type=file]').click();
+   //path to image file
+   let filePath = $('input[type=file]').val();
+   let fileName = filePath.split('\\').pop().split('/').pop();
+   console.log(filePath);
+   let img =  $('div.img-profile.img.image');
+    img.attr('src', filePath);
 
+});
 
 $('.submit-update').click(function (e) { 
     e.preventDefault();
@@ -37,8 +43,6 @@ $('.submit-update').click(function (e) {
     profile_email.text(email);
     profile_phone.text('');
     profile_phone.text(phone);
-
-
 
 
     
