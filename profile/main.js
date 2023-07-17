@@ -10,13 +10,31 @@ const uploadButton = document.querySelector('div.img-profile div.iconDiv');
 uploadButton.addEventListener('click', function() {
    document.querySelector('input[type=file]').click();
    //path to image file
-   let filePath = $('input[type=file]').val();
-   let fileName = filePath.split('\\').pop().split('/').pop();
-   console.log(filePath);
-   let img =  $('div.img-profile.img.image');
-    img.attr('src', filePath);
+   $("input[type=file]").on("change", function () {
+    var input = this;
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          $('#image').attr("src", e.target.result);
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  });
+
 
 });
+
+const textFunc = () => {
+    alert("I am working");
+}
+
+const testButton = document.querySelector('button.test');
+
+testButton.addEventListener('click', textFunc);
+
+    
 
 $('.submit-update').click(function (e) { 
     e.preventDefault();
@@ -51,8 +69,8 @@ $('.submit-update').click(function (e) {
 
 
 
-});
 
 // ------------------- wait for all element to load ends ------------------- 
 
 
+});
