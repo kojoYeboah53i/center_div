@@ -4,17 +4,27 @@
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
+
     /*Big smartphones [426px -> 600px]*/
+    .profileContainer{
+        /* background-color: #a25d48; */
+        padding: 0 !important;
+        margin: 0;
+        height: 100vh !important;
+        width: 100% !important;
+
+
+      }
 }
 
 
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px)  {
     /*Small smartphones [325px -> 425px]*/
 
     .profileContainer{
-        background-color: #4b71a6;
+        background-color: #4879a2;
         padding: 0 !important;
         margin: 0;
         height: 100vh !important;
@@ -73,13 +83,14 @@
       }
    
   
-      .profile-control .profile-info{
-      display: none;
-        
-      }
+
+
+
+
       div.profile div.aside div.edit-profile {
         height: 100vh !important;
         padding: 0.1rem 1rem;
+
       }
      
       div.profile div.aside div.edit-profile form .grid-col{
@@ -102,12 +113,11 @@
         padding: 0.1rem 0.1rem !important;
       }
        label.info-label.last-child{
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
         gap: 0.8rem;
-        width: 100% !important;
-        font-size: 0.9rem !important;
+        padding: 0.1rem 0.1rem !important;
+        transform: translateX(-55%) !important;
+
+
       }
 
 div.profile div.aside div.edit-profile form div.form-control.contact span {
@@ -115,7 +125,71 @@ div.profile div.aside div.edit-profile form div.form-control.contact span {
         font-size: 1.1rem;
    
       }
+
+
+      /* --------------- profile on the left ----------------- */
+
+      .profile-control .profile-info{
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        /* border: 4px solid red; */
+        height: 100vh;
+        position: relative;
+        top: -5rem;
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 3rem;
+
+
+      }
+
+      .profile-control .profile-info  .info-edit {
+        /* border: 4px solid rgb(200, 255, 0); */
+        font-size: 1.3rem;
+
+      }
+
+      .profile-control .profile-info{
+        display: none;
+          
+        }
+
+
     
     }
+
+
+@media only screen and (max-width: 375px)  {
+
+    div.edit-profile > form > div.form-control.contact{
+        width: 100% !important;
+        padding: 0.1rem 0.1rem !important;
+      }
+
+    /* label.info-label.last-child{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100% !important;
+        font-size: 0.4rem !important;
+        scale: 1.7;
+        transform: translateX(90%) !important;
+        padding: 0.1rem 0.1rem !important;
+        display: none;
+
+
+      } */
+
+div.profile div.aside div.edit-profile form div.form-control.contact span {
+        top: 2.4rem;
+        font-size: 1.1rem;
+   
+      }
+
+}
 
 
