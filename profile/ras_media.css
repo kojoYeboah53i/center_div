@@ -1,0 +1,156 @@
+@media screen and (min-width:768px) {
+    .profile-icon{
+        position: absolute;
+        bottom: -1rem;
+        right: 16rem;
+        scale: 0.8;
+        cursor: pointer;
+    }
+    
+    .profile-form form{
+        /* padding: 0 2rem; */
+        display: flex;
+        /* flex-direction: column; */
+        gap: 1rem;
+        position: relative;
+    }
+
+    .profile-form .input-icon{
+        /* background-color: aqua; */
+        position: absolute;
+        right: -0.2rem;
+    }
+
+    .profile-form form .form-info{
+        /* height: 90%; */
+        display: flex;
+        flex-direction: row;
+        /* gap: 1rem; */
+        /* background-color: yellow; */
+    }
+
+    .profile-form form input{
+        flex-grow: 3;
+        /* background-color: black; */
+    }
+
+    .profile-form form label{
+        width: 140px;
+        white-space: nowrap;
+    }
+
+    .form-edit .input-icon{
+        /* background-color: aqua; */
+        left: 42rem;
+        top: 48.7rem;
+    }
+
+    .form-edit-info{
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+        gap: 0.2rem;
+     /* i will change this in tablet */
+    }
+
+    @media screen and (min-width:800px) {
+        .profile-icon{
+            position: absolute;
+            bottom: -1rem;
+            right: 18rem;
+            scale: 0.8;
+            cursor: pointer;
+        }
+
+        .form-edit .input-icon{
+            /* background-color: aqua; */
+            bottom: 24.2rem;
+            left: 44.8rem;
+        }
+    }
+
+    @media screen and (min-width:989px) {
+
+        .project-container{
+            width: 80%;
+            height: 90vh; 
+            margin: auto;
+            border-radius: 35px;
+            padding: 2rem;
+        }
+
+        .project-header{
+            display: block;
+        }
+
+        .project-header span:last-child{
+            /* background-color: aqua; */
+            margin-left: 22rem;
+            margin-top: 8rem;
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+
+        .profile-container{
+            /* background-color: blue; */
+            display: grid;
+            grid-template-columns: 25rem auto;
+            gap: 3rem;
+            background-color: pink;
+            padding: 2rem;
+            height: 70vh;
+            /* background-color: aquamarine; */    
+        }
+
+        .profile-icon{
+            position: absolute;
+            bottom: -1rem;
+            right: 7rem;
+            scale: 0.8;
+            cursor: pointer;
+        }
+
+        .profile-contents{
+            padding: 2rem;
+            border-radius: 35px;   
+        }
+
+        .profile-form form{
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-form form .form-info{
+            /* height: 90%; */
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            /* gap: 1rem; */
+        }
+
+        .form-edit{
+            /* background-color: aquamarine; */
+            padding: 2rem;
+            position: relative;
+        }
+
+        .form-grid{
+            /* background-color: brown; */
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+        }
+
+        .form-edit-info{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.2rem;
+            /* i will change this in tablet */
+        }
+
+        .submit-btn{
+            margin-top: 2rem;
+        }  
+    }
+
+}

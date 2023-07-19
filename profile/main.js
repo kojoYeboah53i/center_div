@@ -26,18 +26,30 @@ uploadButton.addEventListener('click', function() {
 
 });
 
-const textFunc = () => {
-    alert("I am working");
-}
 
-const testButton = document.querySelector('button.test');
 
-testButton.addEventListener('click', textFunc);
+
 
     
 
 $('.submit-update').click(function (e) { 
     e.preventDefault();
+
+
+    // ---------------- get window width ----------------
+    const width = window.innerWidth;
+    console.log(width);
+
+    if( width <= 425){
+        // alert("Please use a desktop to update your profile");
+        const editProfile = document.querySelector('.edit-profile');
+        profileInfo = document.querySelector('.profile-control .profile-info');
+        editProfile.style.display = 'none';
+        const profileControl = document.querySelector('.profile-control');
+        profileControl.style.height = '80vh';
+        profileInfo.style.display = 'block';
+        // $(profileControl).height('80vh'); 
+    }
     
     // ---------------------span  selecting elements from our webpage----------------------------
    let student_name =  $('span#name');

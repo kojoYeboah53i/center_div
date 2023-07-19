@@ -1,0 +1,52 @@
+@media screen and (max-width: 480px){
+    .profileContainer{
+      background-color: #4b71a6;
+      padding: 0;
+      margin: 0;
+    }
+    .profile{
+      width: 100%;
+      height: 100vh;
+    
+    }
+    .profile .aside{
+      grid-template-columns: 1fr ;
+      gap: 1rem;
+     overflow-y: scroll; 
+    }
+
+    .profile .aside::-webkit-scrollbar {
+      display: none;
+    }
+    .profile .aside .profile-control {
+      margin: 0;
+      height: max-content;
+    
+    }
+
+    .profile-control .profile-info{
+    display: none;
+      
+    }
+  
+    .iconDiv {
+      bottom: 0.07rem;
+      right: 6.7rem;
+    }
+    div.profile div.aside div.edit-profile form .grid-col{
+      grid-template-columns: 1fr ;
+    }
+    div.profile div.aside div.edit-profile {
+     padding: 0.1rem;
+    }
+
+   label{
+      transform: translateX(-10%);
+    }
+   
+ 
+    div.profile div.aside div.edit-profile form div.form-control.contact  {
+     display: none;
+    }
+  
+  }
