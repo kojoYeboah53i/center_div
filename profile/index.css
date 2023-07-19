@@ -343,18 +343,7 @@ div.profile div.aside div.edit-profile form button.submit-update:hover {
   visibility: hidden;
 }
 
-button.test{  
-  width: 100px;
-  height: 6vh;
-  background-color: #274de4;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
+
 
 .d-flex {
   display: flex;
