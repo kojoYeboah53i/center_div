@@ -1,5 +1,6 @@
 // ------------------- wait for all element to load -------------------
-$(document).ready(function () {
+  $(function () {
+    
   let initEmail = $("span#email");
 
   const params = new URLSearchParams(window.location.search); 
@@ -16,7 +17,8 @@ $(document).ready(function () {
 
   //logout
   const logout = document.querySelector(".logout");
-  logout.addEventListener("click", function () {
+  logout.addEventListener("click", function (e) {
+    e.preventDefault();
     window.location.href = "../index.html";
   });
 

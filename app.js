@@ -1,7 +1,7 @@
 // window.on('load', function() {
 window.addEventListener('load', () => {
 
-console.log('app.js is working')
+console.log('app.js is working');
 
     const btn = document.querySelector('.wrapper form .form-group button');
 
@@ -12,8 +12,6 @@ console.log('app.js is working')
         console.log(email.value);
         const error = document.querySelector('.wrapper form .error');
         const message = document.querySelector('.wrapper form .error .error-message');
-
-
 
         if( email.value == '' || email.value == null){
             $(error).fadeIn('slow');
