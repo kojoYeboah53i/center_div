@@ -6,74 +6,89 @@
     <meta author="Adjoa Owusu" />
     <meta
       name="description"
-      content="A simple profile page with a side navigation bar"/>
+      content="A simple profile page with a side navigation bar"
+    />
     <title>Profile</title>
     <link
-    rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <!-- favicon -->
-    <link rel="apple-touch-icon"  href="./DIV-LoGo.png">
+    <link rel="apple-touch-icon" href="./DIV-LoGo.png" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./media.css" />
-
-    </head>
+  </head>
   <body>
     <div class="profileContainer">
       <div class="profile">
         <div class="header">
-          <span class="material-symbols-outlined">
-            border_color
-            </span>
+          <span class="material-symbols-outlined"> border_color </span>
           <h3>Edit Profile</h3>
           <div></div>
+          <div class="logout">
+          <span class="material-symbols-outlined"> logout</span>
+
+          </div>
         </div>
-          <!-- --------------- grid template --------------------- -->
-          <div class="aside">
-                <!-- --------------------left ----------------------- -->
-            <div class="profile-control ">
-              <!-- --------------------- image----------------------- -->
-              <div class="imageContainer">
-                <div class="img-profile">
-                  <img
+        <!-- --------------- grid template --------------------- -->
+        <div class="aside">
+          <!-- --------------------left ----------------------- -->
+          <div class="profile-control">
+            <!-- --------------------- image----------------------- -->
+            <div class="imageContainer">
+              <div class="img-profile">
+                <img
                   class="image"
                   id="image"
                   alt="profile"
                   src="https://images.unsplash.com/photo-1574701148212-8518049c7b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwZ2lybHN8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-                  />
-                  <div class="iconDiv">
-                    <div class="blueCircle">
-                      <span class="material-icons-outlined icon"> photo_camera </span>
-                    </div>
+                />
+                <div class="iconDiv">
+                  <div class="blueCircle">
+                    <span class="material-icons-outlined icon">
+                      photo_camera
+                    </span>
                   </div>
                 </div>
-                </div>
-                
-                <div class="profile-info">
-                 
-                  <div class="info-edit">
-                    <div class="info">
-                    <label for="name" class="info-label">Name</label>
-                    <span type="text" id="name" class="info"> Adjoa Ernie</span>
-                  </div>
+              </div>
+            </div>
 
+            <div class="profile-info">
+              <div class="info-edit">
+                <div class="info">
+                  <label for="name" class="info-label">Name</label>
+                  <span type="text" id="name" class="info"> Adjoa Ernie</span>
                 </div>
-               
-                <div class="info-edit">
-                  <div class="info">
+              </div>
+
+              <div class="info-edit">
+                <div class="info">
                   <label for="school" class="info-label">School</label>
-                  <span type="text" id="school" class="info"> University of Calgary</span>
+                  <span type="text" id="school" class="info">
+                    University of Calgary</span
+                  >
                 </div>
               </div>
               <div class="info-edit">
                 <div class="info">
                   <label for="email" class="info-label">Email</label>
-                  <span type="text" id="email" class="info"> bernyx.owusu@gmail.com</span>
+                  <span type="text" id="email" class="info">
+                    bernyx.owusu@gmail.com</span
+                  >
                 </div>
               </div>
-                <div class="info-edit">
-                  <div class="info">
-                  <label for="contact" class="info-label">Emergency Contact</label>
-                  <span type="text" id="contact" class="info"> +233 559 401 0464</span>
+              <div class="info-edit">
+                <div class="info">
+                  <label for="contact" class="info-label"
+                    >Emergency Contact</label
+                  >
+                  <span type="text" id="contact" class="info">
+                    +233 559 401 0464</span
+                  >
                 </div>
               </div>
 
@@ -88,77 +103,64 @@
                   }); 
 
               </script> -->
-           
-              </div>
-
-
-              <!-- ------------------------------- end of profile info ------------------------------ -->
-
-
-
-              </div>
-
-            <!-- --------------------right ------------------------- -->
-            <div class="edit-profile">
-                <form action="#">
-                  <div class="grid-col">
-                    <div class="form-control ">
-                      <label for="name" class="info-label">first Name</label>
-                      <input type="text" id="firstname" placeholder="first name" />
-                      
-                    </div>
-                    <div class="form-control ">
-                      <label for="name" class="info-label">last Name</label>
-                      <input type="text" id="lastname" placeholder="last name" />
-                      
-                    </div>
-                    
-                  </div>
-                  <div class="form-control">
-                    <label for="school" class="info-label"> School</label>
-                    <input type="text" id="school" placeholder="enter school" />
-
-                  </div>
-
-                  <div class="form-control">
-                    <label for="email" class="info-label"> Email</label>
-                    <input type="text" id="email" placeholder="email" />
-
-                  </div>
-
-                  <div class="form-control contact">
-                    <label for="contact" class="info-label last-child"> Emergency Contact</label>
-                    <input type="text" id="contact" placeholder="contact" required/>
-                    <span class="material-symbols-outlined">
-                      call
-                      </span>
-              
-                  </div>
-
-                    <button class="submit-update" type="button"> Submit</button>
-                </form>
-
             </div>
 
-            <div class="fake-height"></div>
+            <!-- ------------------------------- end of profile info ------------------------------ -->
           </div>
 
-          <!-- ......................... trick upload image ..................... -->
-          <div class="upload trick-upload">
-            <input type="file" id="file" />
-            </div>
+          <!-- --------------------right ------------------------- -->
+          <div class="edit-profile">
+            <form action="#">
+              <div class="grid-col">
+                <div class="form-control">
+                  <label for="name" class="info-label">first Name</label>
+                  <input type="text" id="firstname" placeholder="first name" />
+                </div>
+                <div class="form-control">
+                  <label for="name" class="info-label">last Name</label>
+                  <input type="text" id="lastname" placeholder="last name" />
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="school" class="info-label"> School</label>
+                <input type="text" id="school" placeholder="enter school" />
+              </div>
 
-          <!-- --------------------- end of grid template ----------------------- -->
+              <div class="form-control">
+                <label for="email" class="info-label"> Email</label>
+                <input type="text" id="email" placeholder="email" />
+              </div>
 
+              <div class="form-control contact">
+                <label for="contact" class="info-label last-child">
+                  Emergency Contact</label
+                >
+                <input
+                  type="text"
+                  id="contact"
+                  placeholder="contact"
+                  required
+                />
+                <span class="material-symbols-outlined"> call </span>
+              </div>
 
+              <button class="submit-update" type="button">Submit</button>
+            </form>
+          </div>
 
+          <div class="fake-height"></div>
+        </div>
 
-     
+        <!-- ......................... trick upload image ..................... -->
+        <div class="upload trick-upload">
+          <input type="file" id="file" />
+        </div>
+
+        <!-- --------------------- end of grid template ----------------------- -->
       </div>
     </div>
 
-
     <script src="./jquery.min.js"></script>
-      <script src="./main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

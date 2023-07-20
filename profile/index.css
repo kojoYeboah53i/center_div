@@ -355,3 +355,7 @@ div.profile div.aside div.edit-profile form button.submit-update:hover {
 .d-none{
   display: none;
 }
+
+.logout{
+  cursor: pointer;
+}
