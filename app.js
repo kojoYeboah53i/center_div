@@ -15,7 +15,7 @@ console.log('app.js is working');
 
         if( email.value == '' || email.value == null){
             $(error).fadeIn('slow');
-            $(message).text('Please enter your email');
+            $(message).text('email cannot be empty');
 
             // remove error message after 3 seconds
             setTimeout(() => {

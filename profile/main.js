@@ -1,9 +1,10 @@
 // ------------------- wait for all element to load -------------------
   $(function () {
+  console.log("main javascript file is working");
     
   let initEmail = $("span#email");
 
-  const params = new URLSearchParams(window.location.search); 
+  const params = new URLSearchParams(window.location.search);
 
   // Check if we have the param bodmas
   if (params.has("email")) {
@@ -22,7 +23,6 @@
     window.location.href = "../index.html";
   });
 
-  console.log("main javascript file is working");
 
   const uploadButton = document.querySelector("div.img-profile div.iconDiv");
 
