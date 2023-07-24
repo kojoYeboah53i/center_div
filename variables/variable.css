@@ -1,0 +1,199 @@
+
+:root{
+    --color-primary: rgb(214, 162, 171);
+    --color-primary-faint:rgb(226, 202, 206);
+    --color-secondary: rgb(255, 255, 255);
+    --color-primary-variant: rgb(108, 64, 72);
+    --color-success: rgb(54, 142, 54);
+    --color-info: rgb(54, 95, 142);
+    --color-warning: rgb(216, 195, 77);
+    --color-light: rgb(230, 230, 230);
+    --color-dark: rgb(24, 24, 24);
+    --padding-1: 0.5rem 0.8rem;
+    --padding-2: 1.1rem 1.4rem;
+    --border-radius: 10px;
+    --color-background: #d6d3d3;
+    --width-full: 100%;
+}
+
+
+.theme-dark{
+    --color-dark: rgb(230, 230, 230);
+    --color-light: rgb(24, 24, 24);
+    --color-background: #1d1d1d;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper{
+    background-color: var(--color-light);
+    width: var(--width-full);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 17% 80%;
+    grid-gap: 1rem;
+
+}
+
+
+.sidebar{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--color-background);
+    color: var(--color-dark);
+}
+
+.sidebar .top{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-dark);
+    font-size: 1rem;
+    padding: var(--padding-1);
+
+}
+
+.sidebar .top span{
+    cursor: pointer;
+}
+
+.sidebar ul{
+    position: relative;
+    top: 4rem;
+    height: 80vh;
+    padding: 0;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: var(--padding-1);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    color: var(--color-dark);
+    font-weight: 400;
+    padding: var(--padding-1);
+    transform: translateX(20%);
+
+}
+
+.sidebar ul li:hover{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    
+}
+
+.sidebar ul li:last-child{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--padding-1);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateX(0%);
+
+}
+
+.content{
+    padding: var(--padding-2);
+
+}
+
+.content .header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: var(--padding-1);
+margin: 0 auto;
+}
+
+.content .header h1{
+    color: var(--color-dark);
+}
+
+.content .header .switch{
+    display: block;
+    width: 50px;
+    height: 2rem;
+    display: flex;
+    border-radius: 10px;
+    padding: var(--padding-1);
+    align-items: center;
+    cursor: pointer;
+
+}
+.content .header .switch span{
+    border-radius: var(--border-radius);
+}
+.content .header .switch span:first-child{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.content .card-col{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 100%;
+    height: 22vh;
+}
+
+.content .card-col .card{
+width: 100%;
+height: 100%;
+background-color: var(--color-primary-variant);
+border-radius: var(--border-radius);
+padding: var(--padding-2);
+
+}
+
+.content .card-col .card .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-light);
+    font-size: 1rem;
+    padding: var(--padding-1);
+    width: 100%;
+}
+.content .card-col .card .card-body{
+    width: 100%;
+    padding: var(--padding-1);
+    color: var(--color-light);
+}
+
+.content .card-col .card .card-footer{
+    width: 100%;
+    padding: var(--padding-1);
+}
+
+.content .card-col .card .card-footer button.btn{
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: none;
+    padding: var(--padding-1);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 400ms ease-in-out;
+    width: 70%;
+    margin: 0 5rem;
+}
+
+.content .card-col .card:last-child{
+    background-color: var(--color-warning);
+}
+.content .card-col .card:nth-child(2){
+    background-color: var(--color-info);
+}
