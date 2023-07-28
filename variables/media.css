@@ -1,0 +1,12 @@
+@media only  screen and (max-width: 480px) {
+  .wrapper{
+    grid-template-columns: 50% 50%;
+  }
+ .show{
+     display: block;
+ }
+
+ .content .card-col{
+    grid-template-columns:  1fr;
+ }
+}

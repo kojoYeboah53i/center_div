@@ -43,6 +43,21 @@
 
 }
 
+.show{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: var(--padding-2);
+    display: none;
+    cursor: pointer;
+
+}
+.sidebar-short{
+    transform: translateX(-100%);
+}
+.sidebar-full{
+    transform: translateX(0%);
+}
 
 .sidebar{
     width: 100%;
@@ -50,6 +65,8 @@
     overflow: hidden;
     background-color: var(--color-background);
     color: var(--color-dark);
+    transition: all 400ms ease-in-out;
+    z-index: 10;
 }
 
 .sidebar .top{

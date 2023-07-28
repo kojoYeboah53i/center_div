@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tailwind CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+        <!-- tailwind css cdn  -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="tailwind.css">
+
+</head>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+            height:{
+                '70' : '60vh',
+                '400' : '400px'
+            },
+         width: {
+          '900' : '900px',
+          '400' : '400px',
+           '100' : '100vw'
+         },
+
+          colors: {
+            'primary' : '#274063'
+          }
+        }
+      }
+    }
+  </script>
+ 
+    <style>
+        .progress-container{
+            width: 50%;
+        }
+        .progress{
+            width: 17%;
+            height: 8px;
+            background-color: #279b15;
+            border-radius: 10px;
+        }
+    </style>
+
+
+<body>
+
+
+<div class="container-fluid">
+  <div class="container">
+     <div class="card">
+            <div class="card-header">
+                <h1> card header</h1>
+            </div>
+            <div class="card-body">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. </p>
+            </div>
+            <div class="card-footer">
+                <h1> card footer</h1>
+            </div>
+     </div>
+     <div class="card">
+        <div class="card-header">
+            <h1> card header</h1>
+        </div>
+        <div class="card-body">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. </p>
+        </div>
+        <div class="card-footer">
+            <h1> card footer</h1>
+        </div>
+ </div>
+ <div class="card">
+    <div class="card-header">
+        <h1> card header</h1>
+    </div>
+    <div class="card-body">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. </p>
+    </div>
+    <div class="card-footer">
+        <h1> card footer</h1>
+    </div>
+</div>
+<div class="card">
+        <div class="card-header">
+            <h1> card header</h1>
+        </div>
+        <div class="card-body">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. </p>
+        </div>
+        <div class="card-footer">
+            <h1> card footer</h1>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
