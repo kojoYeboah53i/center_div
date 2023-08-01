@@ -1,0 +1,158 @@
+:root {
+  --background-color: #fff;
+  --color-primary: rgb(61, 68, 61);
+  --color-light: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 1.2rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 30vh;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.header .profile {
+  padding: 20px;
+}
+
+img {
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content h1 {
+  padding: 1rem;
+}
+
+.content h2 {
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.icons-group {
+  display: flex;
+  gap: 0.5rem;
+  width: 150px;
+  height: auto;
+}
+
+.header .dark_mode {
+  padding: 20px;
+  border: 4px solid rgb(0, 13, 255);
+}
+
+.content .icon {
+  width: max-content;
+  padding: 10px;
+  background-color: rgb(199, 199, 235);
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 32rem;
+  grid-gap: 1.4rem;
+  padding: 1.3rem 2rem;
+  background-color: var(--background-color);
+}
+
+.wrapper section {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  background-color: rgb(216, 201, 201);
+}
+
+.wrapper .right {
+  width: 100%;
+  border-radius: 10px;
+  height: 100vh;
+  background-color: rgb(219, 202, 202);
+}
+
+.projects {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  margin: auto 0;
+  border-radius: 10px;
+}
+
+.project {
+  padding: 1rem 0.8rem;
+  display: grid;
+  grid-template-columns: 20rem auto;
+  gap: 1rem;
+}
+
+.project .preview {
+  display: block;
+  width: 20rem;
+  height: 16rem;
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.project .description {
+  padding: 1rem 0.8rem;
+  font-size: 1.7rem;
+  background-color: var(--background-color);
+  position: relative;
+  height: 16rem;
+  border-radius: 10px;
+}
+
+.project .description button {
+  position: absolute;
+  bottom: 10px;
+  left: 1rem;
+  background-color: #57579d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(48, 47, 47);
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal .item {
+  text-align: center;
+  margin: auto 0;
+  width: 40%;
+  height: 50vh;
+  background-color: var(--color-light);
+  /* rel */
+}

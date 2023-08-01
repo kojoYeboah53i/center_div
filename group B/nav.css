@@ -10,9 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.prroject-container{
 
-}
 
 .nav-bar{
     /* width: 100%; */
@@ -120,9 +118,7 @@ img{
     display: flex;
 }
 
-.profile-badge img{
-    /* margin-top: 0.7rem; */
-}
+
 
 .badge-profile{
     font-size: 4rem;

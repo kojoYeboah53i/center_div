@@ -6,7 +6,6 @@
 
   const params = new URLSearchParams(window.location.search);
 
-  // Check if we have the param bodmas
   if (params.has("email")) {
     
     initEmail.text("");
