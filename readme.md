@@ -9,3 +9,5 @@
 ## grid youtube
 
 - https://www.youtube.com/watch?v=0xMQfnTU6oo
+
+- we

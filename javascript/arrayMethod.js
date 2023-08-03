@@ -117,3 +117,17 @@ const sum = ages.reduce((a, b) => {
   // })
   
     //  console.log(totalYears);
+
+    //  const temperature = [
+    //   33, 12, 16, 5, 25, 64, 32,
+    //   {name : "temp", patientId: 4, clinic: "Nyaho"},
+    //   {name : "temp", patientId: 5, clinic: "Trinity"},
+
+    //  ];
+
+    //  const clinic = temperature[8].filter(pt => pt.patientId == 4)
+    //                 .map(patient.clinic)
+    //       console.log(clinic)
+
+
+    
