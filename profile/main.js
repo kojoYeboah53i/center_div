@@ -55,6 +55,7 @@
   }, 4000);
 
   const changeProfile = document.querySelector(".header span");
+
   // -------- switch to edit profile---------------
   changeProfile.addEventListener("click", function () {
     const editProfile = document.querySelector(".edit-profile");
@@ -129,7 +130,7 @@
       // console.log(postData)
 
       console.log(fn)
-      
+
       //------------------ ajax approach ---------------
       // $.ajax({
       //   type: "POST",
@@ -145,16 +146,16 @@
 
     
        try{
-          const url ='https://pick-up-service-de35950ca197.herokuapp.com/api'
+          const url ='http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl'
 
-            const requestOptions = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json' // Set the content type to JSON
-            },
-            body: JSON.stringify(postData) // Convert user data to JSON string
-          };
-         const result = await fetch('http://localhost:8000/api/user',requestOptions )//fetch ends here
+         const result = await fetch(`${url}/user`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json' // Set the content type to JSON
+          },
+          body: JSON.stringify(postData) // Convert user data to JSON string
+
+         })//fetch ends here
 
           let res = await result.json();
           console.log(res)

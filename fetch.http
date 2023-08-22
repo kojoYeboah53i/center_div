@@ -1,10 +1,11 @@
 ###
-GET http://localhost:8000/api/all-users
+# GET http://localhost:9090/api/ordabl/all-users
+GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
 
 
 ###
 
-POST http://localhost:8000/api/user
+POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
 Content-Type: 'application/json'
 
 {
