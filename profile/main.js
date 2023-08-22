@@ -118,40 +118,46 @@
         return 
       }
 
-      // const postData = {
-      //   firstname: fn,
-      //   lastname: ln,
-      //   email: email_right,
-      //   school: school_right,
-      //   contact: phone_right,
-      // }
+      const postData = {
+        firstname: fn,
+        lastname: ln,
+        email: email_right,
+        school: school_right,
+        contact: phone_right,
+      }
 
       // console.log(postData)
 
       console.log(fn)
+      
+      //------------------ ajax approach ---------------
+      // $.ajax({
+      //   type: "POST",
+      //   url: "http://localhost:8000/api/user",
+      //   dataType : "json",
+      //   contentType: "application/json; charset=utf-8",
+      //   data: JSON.stringify(postData),
+      //   success: function (response) {
+      //     console.log(response)
+      //   }
+      // });
 
 
     
        try{
-          // const url ='https://pick-up-service-de35950ca197.herokuapp.com/api'
-         const result = await fetch('http://localhost:8000/api/user',{
-           method: 'POST',
-           header: {
-              'Content-Type': 'application/json',
-              },
-           
-          body: JSON.stringify({ 
-          firstname: fn,
-          lastname: ln,
-          email: email_right,
-          school: school_right,
-          contact: phone_right
-        })
+          const url ='https://pick-up-service-de35950ca197.herokuapp.com/api'
 
-      })//fetch ends here
+            const requestOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json' // Set the content type to JSON
+            },
+            body: JSON.stringify(postData) // Convert user data to JSON string
+          };
+         const result = await fetch('http://localhost:8000/api/user',requestOptions )//fetch ends here
 
-      let res = await result.json();
-      console.log(res)
+          let res = await result.json();
+          console.log(res)
 
     } catch(error){
       const errorCode = error.code;
@@ -159,7 +165,6 @@
       console.log(errorCode, errorMessage);
     }
     
-     
   
      })();
 
