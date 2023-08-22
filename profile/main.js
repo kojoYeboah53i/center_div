@@ -70,7 +70,7 @@
     editHeader.style.display = "flex";
   });
 
-  $(".submit-update").click(function (e) {
+  $(".submit-update").click(function  (e) {
     e.preventDefault();
 
     const editHeader = document.querySelector(".header h3");
@@ -96,6 +96,71 @@
       editProfile.classList.remove("d-block");
       editProfile.classList.add("d-none");
     }
+
+
+    //---------------- post data to server -----------------------
+ 
+     (async() =>{
+       console.log("self invoking function is working")
+
+      
+
+       //----------- get form data-------------
+       const fn = document.querySelector('input#firstname').value
+       const ln = document.querySelector('input#lastname').value
+       const school_right = document.querySelector("input#school").value;
+      const email_right = document.querySelector("input#email").value;
+      const phone_right = document.querySelector("input#contact").value;
+
+      if(fn == '' || email == ''){
+        alert('please fill all fields')
+
+        return 
+      }
+
+      // const postData = {
+      //   firstname: fn,
+      //   lastname: ln,
+      //   email: email_right,
+      //   school: school_right,
+      //   contact: phone_right,
+      // }
+
+      console.log(fn)
+
+
+    
+       try{
+          // const url ='https://pick-up-service-de35950ca197.herokuapp.com/api'
+         const result = await fetch('http://localhost:8000/api/user',{
+           method: 'POST',
+           header: {
+              'Content-Type': 'application/json',
+              },
+           
+          body: JSON.stringify({ 
+          firstname: fn,
+          lastname: ln,
+          email: email_right,
+          school: school_right,
+          contact: phone_right
+        })
+
+      })//fetch ends here
+
+      let res = await result.json();
+      console.log(res)
+
+    } catch(error){
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    }
+    
+     
+  
+  })();
+
 
     // ---------------------span  selecting elements from our webpage----------------------------
     // let student_name = $("span#name");

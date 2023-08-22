@@ -1,0 +1,17 @@
+###
+GET http://localhost:8000/api/all-users
+
+
+###
+
+POST http://localhost:8000/api/user
+Content-Type: 'application/json'
+
+{
+    "firstname": "Michael",
+    "lastname": "Murdock",
+    "email" : "purposedrive@chapel.com",
+    "contact" : 1239999934,
+    "school"  : "Stanford University College"
+
+}
