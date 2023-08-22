@@ -113,6 +113,10 @@
       const email_right = document.querySelector("input#email").value;
       const phone_right = document.querySelector("input#contact").value;
 
+      //-------------- profile info elements ----------
+      const name = document.querySelector('.info span#name')
+      // console.log(name)
+
       if(fn == '' || email == ''){
         alert('please fill all fields')
 
@@ -159,6 +163,11 @@
 
           let res = await result.json();
           console.log(res)
+          console.log(res.firstname)
+          console.log(res.lastname)
+
+          // name.innerHTML = `${res.firstname}` + " " + `${res.lastname}`
+          name.innerHTML = res.firstname + " " + res.lastname;
 
     } catch(error){
       const errorCode = error.code;
