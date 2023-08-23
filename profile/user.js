@@ -6,7 +6,7 @@ async function getAllUsers() {
   wrapper.classList.add('wrapper');
                             
 
-  const result = await fetch('http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
+  const result = await fetch('https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
   // const result = await fetch('http://localhost:9090/api/ordabl/all-users');
   const response = await result.json()
   console.log('response from server ')
@@ -79,7 +79,7 @@ async function getAllUsers() {
      let  confirmed = confirm("you about to delete user with id  " + btn.id);
 
      if(confirmed  === true) {
-      fetch(`http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
+      fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
