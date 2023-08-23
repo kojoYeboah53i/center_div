@@ -1,18 +1,27 @@
 ###
-# GET http://localhost:9090/api/ordabl/all-users
-GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
+GET http://localhost:9090/api/ordabl/all-users
+# GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
 
 
+# POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
 ###
-
-POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
+POST http://localhost:9090/api/ordabl/user
 Content-Type: 'application/json'
 
 {
     "firstname": "Michael",
     "lastname": "Murdock",
-    "email" : "purposedrive@chapel.com",
+    "email" : "purpostur4ve@chapel.com",
     "contact" : 1239999934,
     "school"  : "Stanford University College"
 
 }
+
+
+# POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
+###
+GET http://localhost:9090/api/ordabl/all-users
+
+###
+DELETE http://localhost:9090/api/ordabl/profile/7
+
