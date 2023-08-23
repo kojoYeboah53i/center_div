@@ -54,21 +54,12 @@
     }
   }, 4000);
 
-  const changeProfile = document.querySelector(".header span");
+  const changeProfile = document.querySelector(".header .next-page");
 
   // -------- switch to edit profile---------------
   changeProfile.addEventListener("click", function () {
-    const editProfile = document.querySelector(".edit-profile");
-    const profileControl = document.querySelector(".profile-control");
-    profileControl.classList.remove("d-flex");
-    profileControl.classList.add("d-none");
 
-    // -----------  show edit profile --------------
-    editProfile.classList.remove("d-none");
-    editProfile.classList.add("d-block");
-
-    const editHeader = document.querySelector(".header h3");
-    editHeader.style.display = "flex";
+    window.location.href = './user.html'
   });
 
   $(".submit-update").click(function  (e) {

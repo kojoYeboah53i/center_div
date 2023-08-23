@@ -55,6 +55,11 @@ body{
   justify-content: space-between;
   padding: 1rem 2rem;
 }
+.next-page{
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
 
 .profile .aside{
   
