@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="profileContainer">
+        <div class="profile">
+          <div class="header">
+            <div class="next-page">
+           
+            </div>
+            <h3>Update Profile</h3>
+            <div></div>
+            <div class="logout">
+            <span class="material-symbols-outlined"> logout</span>
+  
+            </div>
+          </div>
+  
+        
+          <!-- --------------- grid template --------------------- -->
+          <div class="aside">
+            <!-- --------------------left ----------------------- -->
+            <div class="profile-control">
+       
+  
+              <!-- ------------------------------- end of profile info ------------------------------ -->
+            </div>
+  
+            <!-- --------------------right ------------------------- -->
+            <div class="edit-profile">
+              <form action="#">
+                <div class="grid-col">
+                  <div class="form-control">
+                    <label for="name" class="info-label">first Name</label>
+                    <input type="text" id="firstname" placeholder="first name" />
+                  </div>
+                  <div class="form-control">
+                    <label for="name" class="info-label">last Name</label>
+                    <input type="text" id="lastname" placeholder="last name" />
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label for="school" class="info-label"> School</label>
+                  <input type="text" id="school" placeholder="enter school" />
+                </div>
+  
+                <div class="form-control">
+                  <label for="email" class="info-label"> Email</label>
+                  <input type="text" id="email" placeholder="email" />
+                </div>
+  
+                <div class="form-control contact">
+                  <label for="contact" class="info-label last-child">
+                  Contact</label
+                  >
+                  <input
+                    type="text"
+                    id="contact"
+                    placeholder="contact"
+                    required
+                  />
+                  <span class="material-symbols-outlined"> call </span>
+                </div>
+  
+                <button class="submit-update update" type="button">update</button>
+              </form>
+            </div>
+  
+          </div>
+  
+     
+  
+          <!-- --------------------- end of grid template ----------------------- -->
+        </div>
+      </div>
+         <script src="update.js"></script>
+</body>
+</html>

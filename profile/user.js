@@ -6,7 +6,7 @@ async function getAllUsers() {
   wrapper.classList.add('wrapper');
                             
 
-  const result = await fetch('http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
+  const result = await fetch('https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
   // const result = await fetch('http://localhost:9090/api/ordabl/all-users');
   const response = await result.json()
   console.log('response from server ')
@@ -54,33 +54,16 @@ async function getAllUsers() {
     cnFluid.innerHTML = profile;
     wrapper.appendChild(cnFluid)
 
-  // cnFluid.innerHTML = profile;
   const deleteBtn = wrapper.querySelectorAll('.edit-delete .delete')
   // console.log(deleteBtn)
   deleteBtn.forEach(btn => {
-    // btn.addEventListener('click', () => {
-    //   alert("deleting user with id  " + btn.id)
-    //      fetch(`http://localhost:9090/api/ordabl/profile/${btn.id}`,{
-    //     method: "DELETE",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     }})//fetch ends here
-    //     .then((res )=> {
-
-    //     } )
-    //     .catch((err )=> {
-
-    //     })
-
-    // })
-
     //------------- confirm method ----------
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
      let  confirmed = confirm("you about to delete user with id  " + btn.id);
 
      if(confirmed  === true) {
-      fetch(`http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
-        method: "DELETE",
+      fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
+      method: "DELETE",
         headers: {
           "Content-Type": "application/json"
         }})//fetch ends here
@@ -88,6 +71,15 @@ async function getAllUsers() {
           if(response.status == 200 || response.status == 201){
             //code comes here
             console.log('deleted successfully')
+
+            const usr =   e.target.parentElement.parentElement;
+            const user = usr.parentElement;
+            user .classList.add('remove-deleted');
+            user.addEventListener('transitionend', () =>{
+              user.remove();
+            })
+
+
             return true;
            }
            return false;
@@ -100,6 +92,31 @@ async function getAllUsers() {
 
      })
 })
+
+
+const editBtn = wrapper.querySelectorAll('.edit-delete .edit')
+editBtn.forEach(btn => {
+  btn.addEventListener('click', async (e) => {
+    try {
+
+      alert('attempting to edit/update user with id ' +  btn.id);
+      
+      const profile = await fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user/${btn.id}`)
+      
+      let response = await profile.json()
+      console.log(response);
+        
+       window.location.href = `./update.html?id=${response.id}&firstname=${response.firstname}&lastname=${response.lastname}
+       &email=${response.email}&school=${response.school}&contact=${response.contact}`
+        
+        return true;
+    }catch(error) {
+            console.error(error)
+        }
+
+  })
+})
+
         
 
 
@@ -109,3 +126,8 @@ document.body.appendChild(wrapper);
 
  getAllUsers();
 
+const gBack = document.querySelector('.header .logout');
+
+gBack.addEventListener('click', () => {
+  window.location.href = './index.html'
+})

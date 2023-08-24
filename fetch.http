@@ -1,6 +1,6 @@
 ###
-GET http://localhost:9090/api/ordabl/all-users
-# GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
+# GET http://localhost:9090/api/ordabl/all-users
+GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users
 
 
 # POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
@@ -24,4 +24,8 @@ GET http://localhost:9090/api/ordabl/all-users
 
 ###
 DELETE http://localhost:9090/api/ordabl/profile/7
+
+###
+
+GET https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user/24
 
