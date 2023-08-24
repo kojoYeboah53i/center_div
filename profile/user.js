@@ -63,7 +63,7 @@ async function getAllUsers() {
 
      if(confirmed  === true) {
       fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
-      method: "DELETE",
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json"
         }})//fetch ends here
