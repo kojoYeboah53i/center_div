@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge add Firefox */
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  
+  .profileContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: #4b71a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     overflow: hidden;
+    margin: 0 auto;
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .profile {
+    margin-top: -1rem;
+    width: 65%;
+    color: white;
+    height: 95vh;
+    border-radius: 15px;
+    padding: 1.2rem 1rem;
+  
+  
+  }
+  .profile .header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  .next-page{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .profile .aside{
+    
+      display: grid;
+      grid-template-columns: 8rem auto;
+    grid-gap: 1rem;
+    width: 100%;
+    height: 94%;
+    padding:1.1rem 0.2rem;
+    text-align: center;
+    align-items: center;
+
+  
+  }
+  
+  .profile .aside .profile-control{
+    width: 100%;
+    height: 100%;
+    background-color: #274063;
+    border-radius: 15px;
+    padding: 1rem 0.2rem;
+    position: relative;
+    color: white;
+    transition: all 400ms ease-in-out;
+    visibility: hidden;
+  
+  }
+  
+  
+  
+  .imageContainer {
+    margin-top: -1.8rem;
+    /* height: max-content; */
+    margin: 0 auto;
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-profile {
+    margin-top: -1.8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 1rem 2rem;
+  }
+   div.img-profile img.image {
+    width: 6rem;
+    height: 6em;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .blueCircle {
+    width: 50px;
+    height: 50px;
+    background-color: #27b4e4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconDiv {
+    position: absolute;
+    bottom: -1.8rem;
+    right: 4.7rem;
+    scale: 0.8;
+    cursor: pointer;
+  }
+  
+  .icon {
+    color: #fff;
+  }
+  
+  .profile-control .profile-info{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    /* position: relative; */
+    color: white;
+    margin: 0 auto;
+    /* display: none; */
+    transition: all 400ms ease-in-out;
+  
+    
+  }
+  
+  .profile-control .profile-info .info-edit{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    padding: 0.3rem 0.8rem;
+    
+  
+  }
+  
+  .profile-control .profile-info .info-edit .info{
+    display: flex;
+    grid-gap: 0.3rem;
+    width: 100%;
+    margin: 0.2rem 02rem;
+    padding: 0;
+    height: 100%;
+    color: white;
+    position: relative;
+  
+  }
+  
+  
+   div.profile-control div.profile-info div.info-edit div.info label.info-label{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:  2.7rem;
+    top: -1rem;
+    color: white;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #27b4e4;
+  }
+   div.profile-control div.profile-info div.info-edit div.info span {
+  
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0.8rem;
+    top: 0.5rem;
+    color: white;
+    transform: translateX(-50%);
+    font-size: 1rem;
+  
+    
+  
+  }
+  
+  
+  div.profile div.aside div.edit-profile {
+   
+    width: 100%;
+    height: 100%;
+    background-color: #274063;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 400ms ease-in-out;
+  
+  }
+  
+  div.profile div.aside div.edit-profile form {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.8rem;
+    text-align: center;
+    margin: 0 auto;
+  
+  }
+  div.profile div.aside div.edit-profile form .grid-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2rem;
+    width: 100%;
+  }
+  div.profile div.aside div.edit-profile form .grid-col .form-control label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateX(-17%);
+    font-size: 0.9rem;
+    height:100% ;
+    scale: 1.1;
+  
+  }
+  
+  
+  div.profile div.aside div.edit-profile form .form-control{
+    width: 100%;
+    height: 12vh;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.4rem 0.7rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 0.8rem;
+  
+  }
+  
+  div.profile div.aside div.edit-profile form .form-control label{
+    color: #27b4e4;
+    font-size: 1.1rem;
+    transform: translateX(-44%);
+    padding: 0.1rem 3.2rem;
+    transition: all 0.3s ease-in-out;
+  
+  }
+  
+  div.profile div.aside div.edit-profile form .form-control label:focus{
+    font-size: 1rem;
+  }
+  
+  
+  div.profile div.aside div.edit-profile form .form-control input{
+    border: none;
+    border-bottom: 3px;
+    
+    width: 100%;
+    height: 2.7rem;
+    outline:none;
+    border-radius: 8px;
+    padding: 0 1rem;
+    background-color: #0d1828;
+    color: white;
+  }
+  
+  div.profile div.aside div.edit-profile form .form-control input:focus{
+  
+    outline:none; 
+  }
+  
+  div.profile div.aside div.edit-profile form div.form-control label.info-label.last-child {
+    padding: 0.6rem 8.2rem;
+    position: relative;
+    left: 3rem;
+  }
+  
+   div.profile div.aside div.edit-profile form div.form-control.contact {
+    position: relative;
+  }
+  
+  div.profile div.aside div.edit-profile form div.form-control.contact span {
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+    color: #27b4e4;
+  }
+  
+  
+  
+  .fake-height{
+    width: 100%;
+  }
+  
+   div.profile div.aside div.edit-profile form button.submit-update {
+    width: 98%;
+    height: 2.7rem;
+    border-radius: 8px;
+    background-color: #27b4e4;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1.8rem;
+  }
+  
+  div.profile div.aside div.edit-profile form button.submit-update:hover {
+    background-color: rgb(230, 230, 230);
+    color: #27b4e4;
+  }
+  
+  .trick-upload{
+    width: 50%;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .d-block{
+    display: block;
+  }
+  
+  .d-none{
+    display: none;
+  }
+  
+  .logout{
+    cursor: pointer;
+  }

@@ -6,7 +6,7 @@ async function getAllUsers() {
   wrapper.classList.add('wrapper');
                             
 
-  const result = await fetch('http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
+  const result = await fetch('https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/all-users');
   // const result = await fetch('http://localhost:9090/api/ordabl/all-users');
   const response = await result.json()
   console.log('response from server ')
@@ -75,11 +75,11 @@ async function getAllUsers() {
     // })
 
     //------------- confirm method ----------
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
      let  confirmed = confirm("you about to delete user with id  " + btn.id);
 
      if(confirmed  === true) {
-      fetch(`http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
+      fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/profile/${btn.id}`,{
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
@@ -88,6 +88,15 @@ async function getAllUsers() {
           if(response.status == 200 || response.status == 201){
             //code comes here
             console.log('deleted successfully')
+
+            const usr = e.target;
+            const user = usr.parentElement;
+            user.classList.add('remove-deleted');
+            user.addEventListener('transitionend', () =>{
+              user.remove();
+            })
+
+
             return true;
            }
            return false;

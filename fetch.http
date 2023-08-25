@@ -5,16 +5,24 @@ GET http://localhost:9090/api/ordabl/all-users
 
 # POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user
 ###
-POST http://localhost:9090/api/ordabl/user
+POST http://localhost:8000/api/ordabl/user
 Content-Type: 'application/json'
 
 {
     "firstname": "Michael",
     "lastname": "Murdock",
-    "email" : "purpostur4ve@chapel.com",
+    "email" : "purposr4ve@chapel.com",
     "contact" : 1239999934,
     "school"  : "Stanford University College"
 
+}
+
+###
+POST http://localhost:8000/api/create-item
+Content-Type: 'application/json'
+
+{
+    "name" : "new item"
 }
 
 
