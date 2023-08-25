@@ -1,11 +1,30 @@
-window.addEventListener('load', (e) => {
+window.addEventListener('load',async (e) => {
     e.preventDefault();
 
+            //get available items
+        const allItems = await fetch('http://localhost:8000/api/ordabl/items')
+        const items = await allItems.json();
+
+        //items is an array
+        items.forEach(itm => {
+            const container = document.querySelector('.to-do-container');
+            const item = document.createElement('div')
+            item.classList.add('item')
+            item.id = itm.id
+            item.innerHTML += `
+            <h2> ${itm.name}</h2>
+            <span class="material-symbols-outlined delete" >delete</span>
+            `
+            container.appendChild(item)
+        })
+
     const addItem = document.querySelector('.add-item span')
-    console.log(addItem)
 
     addItem.addEventListener('click', async (e) => {
         e.preventDefault();
+
+
+
 
         try{
         const item = document.querySelector('.add-item input').value;
@@ -14,12 +33,13 @@ window.addEventListener('load', (e) => {
             return;
         }
         //code 
+        document.querySelector('.add-item input').value = '';
+
      
-        const url = 'http://localhost:8000/api/create-item'
+        const url = 'http://localhost:8000/api/ordabl/create-item'
         const postData ={
             name: item
         }
-        console.log(postData)
         const result = await fetch(url, {
             method: 'POST',
             headers: {
@@ -28,35 +48,33 @@ window.addEventListener('load', (e) => {
             body: JSON.stringify(postData) // Convert user data to JSON string
   
            })
-           const response = await result.json();
+      
+        if(result.status == 200 || result.status == 201){
+            const response = await result.json();
             console.log(response)
-        // if(result.status == 200 || result.status == 201){
-        //     const response = await result.json();
-        //     console.log(response)
-        //     const item = document.createElement('div')
-        //     item.classList.add('item')
-        //     item.id = response.id
-        //     item.innerHTML += `
-        //     <h2> ${response.name}</h2>
-        //     <span class="material-symbols-outlined delete" >delete</span>
-        //     `
-        //    const itemContainer = document.querySelector('.to-do-container') 
-        //    itemContainer.appendChild(item)
-        // }
-
+            const item = document.createElement('div')
+            item.classList.add('item')
+            item.id = response.id
+            item.innerHTML += `
+            <h2> ${response.name}</h2>
+            <span class="material-symbols-outlined delete" >delete</span>
+            `
+           const itemContainer = document.querySelector('.to-do-container') 
+           itemContainer.appendChild(item)
+        }
 
    
         }catch(err){
             console.error(err)
         }
+    
+     
+    
     })
    
    
    
-    // const deleteBtn = document.querySelector('span.material-symbols-outlined.delete')
-    // deleteBtn.addEventListener('click', () => {
-    //     alert("sdfdsf")
-    // })
+ 
 
 
 

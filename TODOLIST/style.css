@@ -63,6 +63,7 @@
     margin: 0 auto;
     width: 100%;
     height: 80vh;
+    overflow: scroll;
 
 }
 .wrapper main .container .to-do-container h1{
