@@ -24,19 +24,18 @@ body{
 
 }
 .container-fluid{
-    margin-top: 3rem;
+    margin: 0 auto;
+    margin-top: 2rem;
     width: 90%;
     height: 80vh;
     padding: 1.5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 0.9rem;
     overflow: hidden;
     overflow-y: scroll;
     color: white;
-    /* border: 2px solid red; */
+    text-align: center;
 }
 .wrapper{
 
