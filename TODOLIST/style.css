@@ -70,7 +70,12 @@
     margin-top: 3rem;
 
 }
-
+.remove-deleted{
+    /* transform: translateY(8rem) rotateZ(20deg); */
+    /* transform: translateX(8rem); */
+    transform: opacity 1s;
+    opacity: 0;
+}
 
 .wrapper main .container .to-do-container .add-item{
     font-size: 1.8rem;
