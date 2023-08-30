@@ -122,6 +122,8 @@
 
 .content{
     padding: var(--padding-2);
+    overflow: hidden;
+    overflow-y: scroll;
 
 }
 
@@ -214,3 +216,19 @@ padding: var(--padding-2);
 .content .card-col .card:nth-child(2){
     background-color: var(--color-info);
 }
+@media only  screen and (max-width: 756px) {
+    .wrapper{
+      grid-template-columns: 1fr;
+    }
+     .sidebar{
+      display: none;
+    }
+  
+   .show{
+       display: none;
+   }
+  
+   .content .card-col{
+      grid-template-columns:  1fr;
+   }
+  }

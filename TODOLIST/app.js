@@ -74,9 +74,37 @@ window.addEventListener('load',async (e) => {
    
    
    
- 
+    const all_delete = document.querySelectorAll('.delete');
+    all_delete.forEach(btn  =>{
+    btn.addEventListener('click', async (e) => {
+
+        //get the item itself not the delete button
+     const itemITSELF =   e.target.parentElement;
+
+     //wait for confirmation from user
+      let confirmed = confirm("are u sure u want to delete item with id "  +itemITSELF.id)
+
+      if(confirmed){
+      let result = await  fetch(`https://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/item/${itemITSELF.id}`,{
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json"
+       }})
+
+       if (result.status == 200 || result.status == 201){
+        itemITSELF.classList.add('remove-deleted')
+
+        //wait for transition to finish
+        itemITSELF.addEventListener('transitionend', () => {
+            itemITSELF.remove();
+              })
 
 
+                    }
+        }
 
+            })
+        })
 
+        
 })

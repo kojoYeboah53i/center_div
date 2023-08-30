@@ -18,12 +18,20 @@ Content-Type: 'application/json'
 }
 
 ###
-POST http://localhost:8000/api/ordabl/create-item
+POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/create-item
+# POST http://localhost:8000/api/ordabl/create-item
 Content-Type: 'application/json'
 
 {
-    "name" : "cleaning at 2pm"
+    "name" : "are u afraid"
 }
+
+###
+GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/items
+
+###
+DELETE  http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/item/4
+
 
 
 # POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/user

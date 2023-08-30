@@ -1,13 +1,12 @@
 # Center DIV
 
-- margin property
+## End of August Report
 
-## flexbox youtube
-
-- https://www.youtube.com/watch?v=JJSoEo8JSnc&t=20s
-
-## grid youtube
-
-- https://www.youtube.com/watch?v=0xMQfnTU6oo
-
-- we
+| name          |      css      | html  | javascript | commitment | attitude | aptitude | position
+| ------------- |:-------------:| -------|---------- | -----------|----------|----------|---------|
+|Christian       |               |        |           |            |          |          |         |
+|Louisa          |               |        |           |            |          |          |         |
+|Abigail         |               |        |           |            |          |          |         |
+|Bernice         |               |        |           |            |          |          |         |
+|Rashida         |               |        |           |            |          |          |         |
+|Blessing        |               |        |           |            |          |          |         |
