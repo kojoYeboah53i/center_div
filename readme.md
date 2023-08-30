@@ -10,4 +10,14 @@
 
 - https://www.youtube.com/watch?v=0xMQfnTU6oo
 
-- we
+## End of August Report
+
+| name          |      css      | html  | javascript | commitment | attitude | aptitude | position
+| ------------- |:-------------:| -------|---------- | -----------|----------|----------|---------|
+|Christian       |               |        |           |            |          |          |         |
+|Louisa          |               |        |           |            |          |          |         |
+|Abigail         |               |        |           |            |          |          |         |
+|Bernice         |               |        |           |            |          |          |         |
+|Rashida         |               |        |           |            |          |          |         |
+|Blessing        |               |        |           |            |          |          |         |
+|Fatima          |               |        |           |            |          |          |         |
